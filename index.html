@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agora web app</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+<main>
+    <div id="prompt" style="display: none;">
+        <div style="top:50%;left:50%;transform:translate(-50%,-50%);z-index:100;position:absolute;display:block;width:350px;">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">APPID</span>
+                            <input id="appid" required type="text">
+                            <label for="appid"></label>
+                        </div>
+                        <div class="card-action">
+                            <a id="prompt-submit" class="blue-text" href="#">Done</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-container">
+        <div id="remote"></div>
+
+        <div id="minimized-container">
+            <div id="me" class="minimized-video"></div>
+            <div id="minimized-remote"></div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <a id="mute-audio" class="greyed-out flex-item "><i class="material-icons">mic</i></a>
+        <a id="leave-call" class="greyed-out flex-item "><i class="material-icons">call_end</i></a>
+        <a id="mute-video" class="greyed-out flex-item "><i class="material-icons">videocam</i></a>
+    </div>
+</main>
+    <script src="./scripts/jquery-3.4.1.min.js"></script>
+    <script src="./scripts/AgoraRTCSDK-2.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
